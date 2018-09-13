@@ -136,6 +136,7 @@ function GetRoomData0() {
 				+ 'in a place like this, but you\'re\r\n'
 				+ 'happy to be free.\r\n\r\n'
 				+ 'CONGRATS ON ESCAPING THE ROOM!!!'
+			, next: 'game-end'
 		}
 		, {
 			id: 18, label: 'start-room-u-lock', verb: 'look', noun: 'lock'
@@ -220,6 +221,10 @@ function GetRoomData0() {
 				+ 'pile in a corner. A radiator with a\r\n'
 				+ 'chain running out from it connects\r\n'
 				+ 'to a pair of [manacles].'
+		}
+		, {
+			id: 5, label: 'game-end', supressCmd: false
+			, msg: 'THE END\r\n'
 		}
 	];
 	const roomdata = {

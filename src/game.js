@@ -229,7 +229,10 @@ function processCommand(command) {
 					if (command.msgSuccess) {
 						result = command.msgSuccess;
 					}
-
+					if (command.next) {
+						// should jumpt to next dialog
+						myGameArea.roomMessageIndex = myGameArea.findMessageByLabel(command.next, myGameArea.roomMessageIndex);
+					}
 					// check is successful, then do setVariable if available
 					if (command.setVariable && command.setValue) {
 						//if valid, commit variable to settings
