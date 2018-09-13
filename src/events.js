@@ -25,7 +25,7 @@ window.addEventListener('keyup', function (e) {
 });
 window.addEventListener('keypress', function (e) {
 	myGameArea.stringBuffer = (myGameArea.stringBuffer || '');
-	if (e.charCode === 13 && myGameArea.stringBuffer !== '') {
+	if (e.keyCode === 13 && myGameArea.stringBuffer !== '') {
 		// enter key
 		let answer = myGameArea.stringBuffer;
 		myGameArea.stringBuffer = '';
@@ -37,11 +37,11 @@ window.addEventListener('keypress', function (e) {
 			//showNextDialogMessage(answer);
 			myGameArea.getNextMessage();
 		}
-	} else if (e.charCode === 13) {
+	} else if (e.keyCode === 13) {
 		// nothing typed
 		myGameArea.getNextMessage();
 	} else if (myGameArea.acceptInput) {
-		let newChar = String.fromCharCode(e.charCode);
+		let newChar = String.fromCharCode(e.keyCode);
 
 		if (myGameArea.buffPosition === myGameArea.stringBuffer.length) {
 			myGameArea.buffPosition = myGameArea.buffPosition + 1
