@@ -41,7 +41,7 @@ window.addEventListener('keypress', function (e) {
 		// nothing typed
 		myGameArea.getNextMessage();
 	} else if (myGameArea.acceptInput) {
-		let newChar = String.fromCharCode(e.keyCode);
+		let newChar = String.fromCharCode(e.charCode);
 
 		if (myGameArea.buffPosition === myGameArea.stringBuffer.length) {
 			myGameArea.buffPosition = myGameArea.buffPosition + 1
